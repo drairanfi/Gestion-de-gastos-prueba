@@ -1,0 +1,27 @@
+@import "./pages/index.css";
+@import "./pages/gastos.css";
+@import "./components/card.css";
+@import "./components/analytics.css";
+@import "./components/recent.css";
+@import "./components/search.css";
+@import "./components/modal.css";
+
+:root{
+     /* colors */
+    --primaryColor: #ABA9A9;
+    
+   
+     /* size */
+    --titleCards: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+

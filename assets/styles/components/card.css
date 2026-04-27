@@ -1,0 +1,46 @@
+/* Mobile first: 2 arriba y 2 abajo */
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.content-card{
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 12px);
+    height: 100px;
+    border-radius: 20px;
+    gap: 12px;
+}
+
+.content-card__title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: var(--titleCards);
+    font-weight: 200;
+    margin-left: 12px;
+}
+
+.content-card__value{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+}
+
+/* Desktop */
+@media (min-width: 600px) {
+    .cards-container{
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 60px;
+        margin-left: 30px;
+
+    }
+}
