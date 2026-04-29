@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastos</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
-<script type="module" src="./assets/js/app.js"></script>
-<button id="btn-nuevo-gasto" class="btn-primary">Nuevo gasto</button>
-<div id="modal-gasto" class="modal modal--hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<script type="module" src="./src/js/app.js"></script>
+<div id="expense-modal" class="modal modal--hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal__overlay" data-close></div>
 
   <div class="modal__content">
@@ -17,33 +16,33 @@
     <h2 id="modal-title" class="modal__title">Expense form</h2>
     <p class="modal__subtitle">Registra un nuevo gasto.</p>
 
-    <form id="form-gasto" class="form" novalidate>
+    <form id="expense-form" class="form" novalidate>
       <div class="form__field">
-        <label for="descripcion">Description</label>
-        <input id="descripcion" name="descripcion" type="text" placeholder="Dinner" required>
-        <span class="form__error" data-error-for="descripcion"></span>
+        <label for="description">Description</label>
+        <input id="description" name="description" type="text" placeholder="Dinner" required>
+        <span class="form__error" data-error-for="description"></span>
       </div>
 
       <div class="form__row">
         <div class="form__field">
-          <label for="monto">Amount</label>
-          <input id="monto" name="monto" type="number" min="0.01" step="0.01" placeholder="000" required>
-          <span class="form__error" data-error-for="monto"></span>
+          <label for="amount">Amount</label>
+          <input id="amount" name="amount" type="number" min="0.01" step="0.01" placeholder="000" required>
+          <span class="form__error" data-error-for="amount"></span>
         </div>
 
         <div class="form__field">
-          <label for="fecha">Date</label>
-          <input id="fecha" name="fecha" type="date" required>
-          <span class="form__error" data-error-for="fecha"></span>
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date" required>
+          <span class="form__error" data-error-for="date"></span>
         </div>
       </div>
 
       <div class="form__field">
-        <label for="categoria">Category</label>
-        <select id="categoria" name="categoria" required>
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
           <option value="">Select category</option>
         </select>
-        <span class="form__error" data-error-for="categoria"></span>
+        <span class="form__error" data-error-for="category"></span>
       </div>
 
       <div class="form__actions">
@@ -60,7 +59,10 @@
         <div class="search">
             <input class="search__input" type="text" placeholder="Search">
         </div>
-        <button class="expenses-toolbar__category">Category</button>
+        <div class="expenses-toolbar__actions">
+            <button id="btn-new-expense" class="btn-primary">Nuevo gasto</button>
+            <button class="expenses-toolbar__category">Category</button>
+        </div>
     </div>
 
     <div class="expenses-table">
@@ -69,8 +71,9 @@
             <span class="expenses-table__cell">Category</span>
             <span class="expenses-table__cell">Date</span>
             <span class="expenses-table__cell">Amount</span>
+            <span class="expenses-table__cell">Actions</span>
         </div>
-        <div id="lista-gastos"></div>
+        <div id="expenses-list"></div>
     </div>
 </body>
 </html>

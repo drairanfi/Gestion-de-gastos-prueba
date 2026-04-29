@@ -1,4 +1,4 @@
-const modal = document.getElementById('modal-gasto');
+const modal = document.getElementById('expense-modal');
 
 export function openModal() {
     modal.classList.remove('modal--hidden');

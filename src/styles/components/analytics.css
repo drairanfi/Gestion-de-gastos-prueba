@@ -2,7 +2,6 @@
     background-color: var(--primaryColor);
     width: 350px;
     height: 400px;
-    margin: 0 auto;
     margin-left: 12px;
     display: flex;
     flex-direction: column;
@@ -15,10 +14,27 @@
 }
 
 .analytics-container__content{
-    background-color: blanchedalmond;
-    width: 200px;
-    height: 200px;
-    margin: auto;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.analytics-container__content svg{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.analytics-container__content svg text{
+    font-family: Arial, sans-serif;
+}
+
+.analytics-container__content svg rect{
+    transition: opacity 0.15s ease;
+}
+
+.analytics-container__content svg rect:hover{
+    opacity: 0.85;
 }
 
 /* Desktop */

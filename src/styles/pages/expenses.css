@@ -5,6 +5,11 @@
     padding: 16px;
 }
 
+.expenses-toolbar__actions {
+    display: flex;
+    gap: 8px;
+}
+
 .expenses-toolbar__category {
     background-color: #ffffff;
     border: none;
@@ -24,7 +29,7 @@
 
 .expenses-table__row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 12px;
     padding: 14px 0;
     align-items: center;
@@ -63,4 +68,27 @@
     .search {
         max-width: 400px;
     }
+}
+
+.expenses-table__cell--actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-icon {
+  background: #f3f4f6;
+  border: 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-icon--danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-icon:hover {
+  filter: brightness(0.95);
 }

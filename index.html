@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
 <body>
     <header class="dashboard-header">
     <h1>Dashboard Overview</h1>
-    <a href="./gastos.html" class="btn-primary">Ver todos los gastos →</a>
+    <a href="./expenses.html" class="btn-primary">Ver todos los gastos →</a>
   </header>
 <div class="cards-container">
     <div class="content-card">
@@ -18,15 +18,15 @@
     </div>
     <div class="content-card">
       <h2 class="content-card__title">Promedio diario de gastos</h2>
-      <p class="content-card__value" id="metric-promedio">—</p>
+      <p class="content-card__value" id="metric-average">—</p>
     </div>
     <div class="content-card">
       <h2 class="content-card__title">Categoría con mayor gasto</h2>
-      <p class="content-card__value" id="metric-categoria">—</p>
+      <p class="content-card__value" id="metric-category">—</p>
     </div>
     <div class="content-card">
       <h2 class="content-card__title">Número de transacciones del mes</h2>
-      <p class="content-card__value" id="metric-transacciones">—</p>
+      <p class="content-card__value" id="metric-transactions">—</p>
     </div>
   </div>
 
@@ -38,8 +38,10 @@
 
     <div class="recent-container">
       <h2 class="recent-container__title">Gastos recientes</h2>
-      <ul class="recent-container__list" id="lista-recientes"></ul>
+      <ul class="recent-container__list" id="recent-list"></ul>
     </div>
   </div>
+
+  <script type="module" src="./src/js/dashboard-init.js"></script>
 </body>
 </html>
