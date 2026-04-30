@@ -57,13 +57,31 @@
 
     <div class="expenses-toolbar">
         <div class="search">
-            <input class="search__input" type="text" placeholder="Search">
+            <input id="filter-search" class="search__input" type="text" placeholder="Buscar por descripción">
         </div>
         <div class="expenses-toolbar__actions">
             <button id="btn-new-expense" class="btn-primary">Nuevo gasto</button>
             <button id="btn-dashboard" class="btn-primary" onclick="window.location.href='index.html'">Ir a dashboard</button>
-            <button class="expenses-toolbar__category">Category</button>
+            <button id="btn-toggle-filters" class="expenses-toolbar__category" aria-expanded="false" aria-controls="filters-panel">Filtros</button>
         </div>
+    </div>
+
+    <div id="filters-panel" class="filters-panel filters-panel--hidden">
+        <div class="filters-panel__field">
+            <label for="filter-category">Categoría</label>
+            <select id="filter-category">
+                <option value="">Todas</option>
+            </select>
+        </div>
+        <div class="filters-panel__field">
+            <label for="filter-date-from">Desde</label>
+            <input id="filter-date-from" type="date">
+        </div>
+        <div class="filters-panel__field">
+            <label for="filter-date-to">Hasta</label>
+            <input id="filter-date-to" type="date">
+        </div>
+        <button id="btn-clear-filters" class="btn-secondary">Limpiar filtros</button>
     </div>
 
     <div class="expenses-table">

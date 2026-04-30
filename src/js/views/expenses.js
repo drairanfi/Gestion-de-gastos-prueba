@@ -1,4 +1,5 @@
 import { getExpenses } from "../services/storage.js";
+import { applyFilters } from "../components/filters.js";
 
 const container = document.getElementById('expenses-list');
 
@@ -62,13 +63,13 @@ function createRow(expense) {
 }
 
 export function renderExpenses() {
-    const expenses = getExpenses();
+    const expenses = applyFilters(getExpenses());
     container.innerHTML = '';
 
     if (expenses.length === 0) {
         const empty = document.createElement('p');
         empty.className = 'empty-state';
-        empty.textContent = 'No hay gastos registrados.';
+        empty.textContent = 'No hay gastos que coincidan con los filtros.';
         container.appendChild(empty);
         return;
     }
